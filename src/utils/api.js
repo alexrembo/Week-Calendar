@@ -10,11 +10,11 @@ export const saveCalendarData = (calendarData, showModal) => {
   const myHeaders = new Headers()
   myHeaders.append('Content-Type', 'application/json')
   fetch(API_URL, {
-      method: 'POST',
-      headers: myHeaders,
-      mode: 'cors',
-      cache: 'default',
-      body: JSON.stringify(calendarData)
+    method: 'POST',
+    headers: myHeaders,
+    mode: 'cors',
+    cache: 'default',
+    body: JSON.stringify(calendarData)
   })
   .then(() => showModal({ component: 'InformationAlert', message: 'Data saved!' }))
 }
